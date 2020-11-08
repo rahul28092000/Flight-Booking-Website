@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><strong>Fly To Destiny</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    	<li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item ">
+        <a class="nav-link" href="file:///C:/Users/Deepali%20Debnath/Desktop/INT%20CA3/INT%20CA3%20Flight%20booking%20website/webbo.html">HOME</a>
+      </li>
+      <li class="nav-item active ">
+        <a class="nav-link" href="file:///C:/Users/Deepali%20Debnath/Desktop/INT%20CA3/INT%20CA3%20Flight%20booking%20website/booking.html">BOOKING<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/Deepali%20Debnath/Desktop/INT%20CA3/INT%20CA3%20Flight%20booking%20website/safety.html">SAFETY</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">offers</a>
+          <a class="dropdown-item" href="#">custom</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">help</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="file:///C:/Users/Deepali%20Debnath/Desktop/INT%20CA3/INT%20CA3%20Flight%20booking%20website/travellers.html" tabindex="-1" aria-disabled="true">KNOW US</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav><br><br>
+	<div class="row ">
+	<div class="col-md-4" ><div class="card" style="width: 18rem;">
+  <img src="images.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Spice-jet</h5>
+    <p class="card-text" id="price"></p>
+    <a href="#" class="btn btn-primary" onclick="price()">select</a>
+  </div>
+</div></div>
+	<div class="col-md-4" >
+		<div class="card" style="width: 18rem;">
+  <img src="images1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Airindia</h5>
+    <p class="card-text" id="p"></p>
+    <a href="#" class="btn btn-primary" onclick="pricee()" >select</a>
+  </div>
+</div></div>
+	<div class="col-md-4" ><div class="card" style="width: 18rem;">
+  <img src="images2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">indiGo</h5>
+    <p class="card-text" id="o"></p>
+    <a href="#" class="btn btn-primary" onclick="priceee()" >select</a>
+  </div>
+</div></div>
+</div>
+</div><br>
+<button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="booking()">Edit Booking</button>
+
+
+<script type="text/javascript">
+	
+	function price()
+	{
+		alert("you have selected SPICE_JET airways...");
+
+	
+		var price = "tax-Amount : " + 40 + "<br>" + "price : " + 2000 + "<br>" + "Total : " + 2040 ;
+
+		document.getElementById("price").innerHTML=price;
+		document.getElementById("o").innerHTML=" ";
+		document.getElementById("p").innerHTML=" ";
+	}
+		
+	function pricee()
+	{
+		alert("you have selected Airindia airways...");
+
+	
+		var price = "tax-Amount : " + 20 + "<br>" + "price : " + 2500 + "<br>" + "Total : " + 2520 ;
+
+		document.getElementById("p").innerHTML=price;
+		document.getElementById("price").innerHTML=" " ;
+		document.getElementById("o").innerHTML=" " ;
+	}
+		
+		function priceee()
+	{
+		alert("you have selected indiGo airways...");
+
+	
+		var price = "tax-Amount : " + 200 + "<br>" + "price : " + 1800 + "<br>" + "Total : " + 2000 ;
+
+		document.getElementById("o").innerHTML=price;
+		document.getElementById("price").innerHTML=" " ;
+		document.getElementById("p").innerHTML= " ";
+	}
+
+	function booking()
+	{
+		location.replace("file:///C:/Users/Deepali%20Debnath/Desktop/INT%20CA3/INT%20CA3%20Flight%20booking%20website/booking.html");
+	}
+		
+
+
+</script>
+</body>
+</html>
