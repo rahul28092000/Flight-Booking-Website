@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	.u
+  	{
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  	}
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><strong>Fly To Destiny</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    	<li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li><li class="nav-item ">
+        <a class="nav-link" href="https://harishchette.github.io/airways/webbo.html">HOME</a>
+      </li>
+      <li class="nav-item active ">
+        <a class="nav-link" href="https://harishchette.github.io/airways/booking.html">BOOKING<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://harishchette.github.io/airways/safety.html">SAFETY</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">offers</a>
+          <a class="dropdown-item" href="#">custom</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">help</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="https://harishchette.github.io/airways/travellers.html" tabindex="-1" aria-disabled="true">KNOW US</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav><br><br>
+<form class="form-inline my-2 my-lg-0 u">
+	<div><i class="fas fa-plane-departure"></i></div>
+      <input class="form-control mr-sm-2" type="search"  id="y" placeholder="from" aria-label="Search">
+       <input class="form-control mr-sm-2" type="search"  id="u" placeholder="to" aria-label="Search">
+       <input class="form-control mr-sm-2" type="date"  placeholder="date-of-travel" id="w" aria-label="Search">
+   
+    </form><br>
+    <span style="margin-left: 1150px ; margin-top: -30px;"><button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="booking()">BOOKNOW</button></span>
+
+   <div id="ii"></div>
+
+
+
+<p id="r"></p>
+<script type="text/javascript">
+	
+function booking()
+{
+	var date = document.getElementById("w").value;
+	var from=document.getElementById("y").value;
+	var to=document.getElementById("u").value;
+	if(from=="")
+	{
+		alert("enter your FROM location...");
+	}
+	if(to=="")
+	{
+		alert("enter your TO location...");
+	}
+	if(date=="")
+	{
+		alert("enter your DATE of TRAVEL...");
+	}
+	else
+	{
+		location.replace("https://harishchette.github.io/airways/tickets.html");
+	}
+
+}
+
+</script>
+
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdrw4VM9aEEXM0gtEgTJntjwcKUAONU-c&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+     
+           #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script>
+      function initMap() {
+      
+        const location = { lat:22.09, lng : 31.675 };
+      
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: location,
+        });
+    
+        const marker = new google.maps.Marker({ 
+
+          position: location,
+
+
+          map: map,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Google Maps Showing Your To Address</h3>
+
+    <div id="map"></div>
+ </body>
+</html>
